@@ -1,10 +1,7 @@
 import { useState } from 'react'
 import ArrowLeftIcon from '@material-ui/icons/ArrowLeftOutlined'
 import ArrowRightIcon from '@material-ui/icons/ArrowRightOutlined'
-import style from './Slider.style'
-import { sliderItems } from '../../data'
-
-const {
+import {
   Arrow,
   Button,
   Container,
@@ -15,7 +12,8 @@ const {
   Slide,
   Title,
   Wrapper,
-} = style
+} from './Slider.style'
+import { sliderItems } from '../../data'
 
 export default function Slider() {
   const [slideIndex, setSlideIndex] = useState(0)
