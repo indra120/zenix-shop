@@ -5,7 +5,7 @@ import { categories } from '../../data'
 export default function Categories() {
   return (
     <Container>
-      {categories.map(item => <Category item={item} key={item.id} />)}
+      {categories.map(category => <Category item={category} key={category.id} />)}
     </Container>
   )
 }
