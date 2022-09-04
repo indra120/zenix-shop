@@ -1,4 +1,4 @@
-import { Announcement, Navbar, Slider } from '../components'
+import { Announcement, Categories, Navbar, Slider } from '../components'
 
 export default function Home() {
   return (
@@ -6,6 +6,7 @@ export default function Home() {
       <Announcement />
       <Navbar />
       <Slider />
+      <Categories />
     </>
   )
 }
