@@ -2,6 +2,7 @@ import {
   Announcement,
   Categories,
   Navbar,
+  Newsletter,
   Products,
   Slider,
 } from '../components'
@@ -14,6 +15,7 @@ export default function Home() {
       <Slider />
       <Categories />
       <Products />
+      <Newsletter />
     </>
   )
 }
