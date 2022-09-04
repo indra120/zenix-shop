@@ -1,6 +1,7 @@
 import {
   Announcement,
   Categories,
+  Footer,
   Navbar,
   Newsletter,
   Products,
@@ -16,6 +17,7 @@ export default function Home() {
       <Categories />
       <Products />
       <Newsletter />
+      <Footer />
     </>
   )
 }
