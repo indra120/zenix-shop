@@ -1,6 +1,6 @@
-import { Button, Container, Image, Info, Title } from './CategoryItem.style'
+import { Button, Container, Image, Info, Title } from './Category.style'
 
-export default function CategoryItem({ item }) {
+export default function Category({ item }) {
   return (
     <Container>
       <Image src={item.img} />
