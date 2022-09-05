@@ -1,5 +1,5 @@
-import { Home, ProductList } from './pages'
+import { Home, ProductDetails, ProductList } from './pages'
 
 export default function App() {
-  return <ProductList />
+  return <ProductDetails />
 }
