@@ -18,7 +18,7 @@ export const Info = styled.div`
 
 export const Container = styled.div`
   flex: 1;
-  margin: 0px;
+  margin: 5px;
   min-width: 280px;
   height: 350px;
   display: flex;
@@ -26,7 +26,7 @@ export const Container = styled.div`
   justify-content: center;
   background-color: #f5fbfd;
   position: relative;
-
+  
   &:hover ${Info} {
     opacity: 1;
   }
