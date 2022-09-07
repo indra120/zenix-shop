@@ -8,18 +8,15 @@ async function signin(req, res) {
   try {
     const user = await User.findOne({ username })
 
-    if (!user) {
-      res.status(401).json(`User doesn't exist`)
-    }
+    if (!user) res.status(401).json(`User doesn't exist`)
 
     const decryptedPassword = CryptoJS.AES.decrypt(
       user.password,
       process.env.PASSWORD_ENCRYPTION
     ).toString(CryptoJS.enc.Utf8)
 
-    if (decryptedPassword != inputtedPassword) {
+    if (decryptedPassword != inputtedPassword)
       res.status(401).json('Wrong Password')
-    }
 
     const accessToken = jwt.sign(
       { id: user._id, isAdmin: user.isAdmin },
