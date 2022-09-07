@@ -1,6 +1,6 @@
 const CryptoJS = require('crypto-js')
 const jwt = require('jsonwebtoken')
-const User = require('../models/User')
+const User = require('../../models/User')
 
 async function signin(req, res) {
   const { username, password: inputtedPassword } = req.body

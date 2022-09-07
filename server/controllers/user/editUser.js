@@ -1,5 +1,5 @@
 const CryptoJS = require('crypto-js')
-const User = require('../models/User')
+const User = require('../../models/User')
 
 async function editUser(req, res) {
   let { password } = req.body
