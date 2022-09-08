@@ -1,6 +1,6 @@
 const Product = require('../../models/Product')
 
-async function create(req, res) {
+async function createProduct(req, res) {
   try {
     const newProduct = new Product(req.body)
     const savedProduct = await newProduct.save()
@@ -10,4 +10,4 @@ async function create(req, res) {
   }
 }
 
-module.exports = create
+module.exports = createProduct

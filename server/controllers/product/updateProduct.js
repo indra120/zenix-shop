@@ -1,6 +1,6 @@
 const Product = require('../../models/Product')
 
-async function update(req, res) {
+async function updateProduct(req, res) {
   try {
     const updatedProduct = await Product.findByIdAndUpdate(
       req.params.id,
@@ -17,4 +17,4 @@ async function update(req, res) {
   }
 }
 
-module.exports = update
+module.exports = updateProduct
