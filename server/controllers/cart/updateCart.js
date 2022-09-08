@@ -10,8 +10,8 @@ async function updateCart(req, res) {
       { new: true }
     )
     res.status(200).json(updatedCart)
-  } catch (err) {
-    res.status(500).json(err)
+  } catch (error) {
+    res.status(500).json(error)
   }
 }
 
