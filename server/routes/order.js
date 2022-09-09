@@ -4,8 +4,10 @@ const admin = require('../middlewares/admin')
 const authorization = require('../middlewares/authorization')
 const createOrder = require('../controllers/order/createOrder')
 const updateOrder = require('../controllers/order/updateOrder')
+const deleteOrder = require('../controllers/order/deleteOrder')
 
 router.post('/', verifyToken, createOrder)
 router.put('/:id', admin, updateOrder)
+router.delete('/:id', admin, deleteOrder)
 
 module.exports = router
