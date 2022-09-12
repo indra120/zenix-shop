@@ -7,7 +7,10 @@ export default function verifyToken(req, res, next) {
     token = token.split(' ')[1]
 
     jwt.verify(token, process.env.JWT_SECRET_KEY, (error, user) => {
-      if (error) res.status(403).json('Token is not valid!')
+      if (error) {
+        res.status(403).json('Token is not valid!')
+        return
+      }
       req.user = user
       next()
     })

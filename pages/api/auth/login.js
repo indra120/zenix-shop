@@ -5,9 +5,9 @@ import User from '../../../src/models/User'
 
 export default async function login(req, res) {
   if (req.method === 'POST') {
-    const { username, password } = req.body
-
     await dbConnect()
+
+    const { username, password } = req.body
 
     try {
       const user = await User.findOne({ username })

@@ -5,9 +5,9 @@ import User from '../../../src/models/User'
 
 export default async function register(req, res) {
   if (req.method === 'POST') {
-    const { username, email, password } = req.body
-
     await dbConnect()
+
+    const { username, email, password } = req.body
 
     try {
       const existingUser = await User.findOne({ username })
