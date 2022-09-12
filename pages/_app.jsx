@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { CssBaseline } from '@mui/material'
-import Provider from '../src/components/Provider'
+import { Layout, Provider } from '../src/components'
 import createEmotionCache from '../src/mui/createEmotionCache'
 import theme from '../src/mui/theme'
 
@@ -16,8 +16,12 @@ export default function App({
       <Head>
         <meta name='viewport' content='initial-scale=1, width=device-width' />
       </Head>
+
       <CssBaseline />
-      <Component {...pageProps} />
+
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </Provider>
   )
 }
