@@ -3,7 +3,7 @@ import jwt from 'jsonwebtoken'
 import dbConnect from '../../../src/lib/dbConnect'
 import User from '../../../src/models/User'
 
-export default async function register(req, res) {
+export default async function handler(req, res) {
   if (req.method === 'POST') {
     await dbConnect()
 

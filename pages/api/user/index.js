@@ -2,7 +2,7 @@ import User from '../../../src/models/User'
 import admin from '../../../src/middlewares/admin'
 import dbConnect from '../../../src/lib/dbConnect'
 
-export default async function getUsers(req, res) {
+export default async function handler(req, res) {
   if (req.method === 'GET') {
     admin(req, res, async () => {
       await dbConnect()
