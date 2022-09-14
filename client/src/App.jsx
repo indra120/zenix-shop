@@ -1,7 +1,5 @@
-import React from 'react'
+import { Cart, Home, Login, ProductDetails, ProductList, Register } from './pages'
 
 export default function App() {
-  return (
-    <div>App</div>
-  )
+  return <Cart />
 }
