@@ -3,10 +3,10 @@ import dbConnect from '../../../src/lib/dbConnect'
 import admin from '../../../src/middlewares/admin'
 
 export default async function handler(req, res) {
+  await dbConnect()
+
   switch (req.method) {
     case 'GET':
-      await dbConnect()
-
       const { new: recent = undefined, category = undefined } = req.query
 
       try {
@@ -31,8 +31,6 @@ export default async function handler(req, res) {
       break
     case 'POST':
       admin(req, res, async () => {
-        await dbConnect()
-
         try {
           const product = await new Product(req.body).save()
           res.status(201).json(product)

@@ -5,11 +5,11 @@ import authorization from '../../../src/middlewares/authorization'
 import dbConnect from '../../../src/lib/dbConnect'
 
 export default async function handler(req, res) {
+  await dbConnect()
+  
   switch (req.method) {
     case 'GET':
       admin(req, res, async () => {
-        await dbConnect()
-
         try {
           const user = await User.findById(req.query.id)
           const { _id: id, username, email, isAdmin } = user._doc
@@ -21,8 +21,6 @@ export default async function handler(req, res) {
       break
     case 'PUT':
       authorization(req, res, async () => {
-        await dbConnect()
-
         let { username, email, password } = req.body
         const { id } = req.query
 
@@ -56,8 +54,6 @@ export default async function handler(req, res) {
       break
     case 'DELETE':
       authorization(req, res, async () => {
-        await dbConnect()
-
         try {
           await User.findByIdAndDelete(req.query.id)
           res.status(200).json('User has been deleted.')
